@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from 'react';
+import React from "react";
 // import axios from 'axios';
 // import Signup from "./Componets/signup";
 // import Soko from "./Componets/Soko";
@@ -14,31 +14,31 @@
 // import Masoko from "./Componets/Masoko";
 // import Masokowallet from "./Componets/Masokowallet";
 // import Pricereview from "./Componets/Semi-components/Pricereview";
+import MyGhalacard from "./Componets/Semi-components/myGhalacard";
 
 function App() {
   return (
-    <div>*/
+    <div>
+      <MyGhalacard />
       {/* <Masokowallet/> */}
       {/* <Masoko/> */}
       {/* <Pricereview/> */}
       {/* <Viewsoko/> */}
-      { /*<Soko/> */}
+      {/*<Soko/> */}
       {/* <Ghalas/> */}
-      {/* */ }
+      {/* */}
       {/* <Heroimage/>
       <About/> */}
-      
-      { /*<Blogspage/> */}
+
+      {/*<Blogspage/> */}
       {/* <Card/> */}
-     {/* <Signup/> */}
-     {/* <Login/> */}
-   </div>
+      {/* <Signup/> */}
+      {/* <Login/> */}
+    </div>
   );
 }
 
 export default App;
-
-
 
 // function App() {
 //   const [data, setData] = useState([]);
@@ -61,7 +61,7 @@ export default App;
 //   );
 // }
 
-// export default App; 
+// export default App;
 
 // function App() {
 //   const [data, setData] = useState([]);
@@ -97,7 +97,7 @@ export default App;
 //         <div>
 //           <button onClick={handleLogout}>Logout</button>
 //           <Homepage /> {/* Render the homepage component */}
-          
+
 //         </div>
 //       );
 //     }
