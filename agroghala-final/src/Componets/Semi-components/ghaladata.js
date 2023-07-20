@@ -7,9 +7,9 @@ import Image6 from "../assets/pexels-photo-6152391.jpeg";
 
 const Data = [
   {
-    title: "Ongata Rongai Warehouse",
+    title: "EcoStore Depot",
     description:
-      "This is a sample description 1 This is a sample description 1 This is a sample description 1 This is a sample description 1",
+      "EcoStore Depot provides sustainable and eco-friendly warehousing services for your goods. Store with us and contribute to a greener future.",
     location: "Ongata Rongai",
     on_demand: true,
     space_available: true,

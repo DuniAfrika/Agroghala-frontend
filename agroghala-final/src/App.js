@@ -106,6 +106,7 @@ import Blogspage from "./Componets/blogspage";
 import Login from "./Componets/login";
 import Signup from "./Componets/signup";
 import Masokowallet from "./Componets/Masokowallet";
+import Ghaladetailview from './Componets/ghaladetailview';
 
 function App() {
   return (
@@ -119,6 +120,7 @@ function App() {
         <Route path='/ghala' element={<Ghalas />}></Route>
         <Route path='/mysoko' element={<Masokowallet />}></Route>
         <Route path='/logout' element={<Homepage />}></Route>
+        <Route path='/ghalaview' element={<Ghaladetailview/>}></Route>
       </Routes>
      </>
   );
