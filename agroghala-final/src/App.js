@@ -17,29 +17,8 @@
 // import Pricereview from "./Componets/Semi-components/Pricereview";
 // import MyGhalacard from "./Componets/Semi-components/myGhalacard";
 
-// function App() {
-//   return (
-//     <div>
-//       <MyGhalacard />
-      {/* <Masokowallet/> */}
-      {/* <Masoko/> */}
-      {/* <Pricereview/> */}
-      {/* <Viewsoko/> */}
-      {/*<Soko/> */}
-      {/* <Ghalas/> */}
-      {/* */}
-      {/* <Heroimage/>
-      <About/> */}
-
-      {/*<Blogspage/> */}
-      {/* <Card/> */}
-      {/* <Signup/> */}
-      {/* <Login/> */}
-    </div>
-  );
-}
-
-// export default App;
+ 
+   
 
 // function App() {
 //   const [data, setData] = useState([]);
@@ -124,8 +103,8 @@ import Soko from "./Componets/Soko";
 import Ghalas from "./Componets/Ghalas";
 import Homepage from "./Componets/home";
 import Blogspage from "./Componets/blogspage";
- import Login from "./Componets/login";
- import Signup from "./Componets/signup";
+import Login from "./Componets/login";
+import Signup from "./Componets/signup";
 import Masokowallet from "./Componets/Masokowallet";
 
 function App() {
