@@ -1,23 +1,20 @@
 import React from "react";
 import Navbar from "./Semi-components/navbar";
-import Card2 from "./Semi-components/Card2";
+import Footer from "./Semi-components/footer[1]";
+import MyGhalacard from "./Semi-components/myGhalacard";
 
 function Ghalas() {
   return (
-    <div className="pt-20">
+    <div className="">
       <Navbar />
-      <h1 className="my-4 font-sans text-6xl font-semibold text-green-300 underline">
+      <h1 className="font-sans text-2xl font-semibold text-green-300 underline ">
         OUR GHALAS
       </h1>
-      <div className="grid grid-cols-3 gap-4 px-4 mt-4 mb-4">
-        <Card2 />
-        <Card2 />
-        <Card2 />
-        <Card2 />
-        <Card2 />
-        <Card2 />
-        <Card2 />
-        <Card2 />
+      <div className="">
+        <MyGhalacard />
+      </div>
+      <div className="mt-14">
+        <Footer />
       </div>
     </div>
   );
