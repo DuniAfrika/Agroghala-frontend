@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import axios from 'axios';
 // import Signup from "./Componets/signup";
@@ -16,9 +15,6 @@
 // import Masokowallet from "./Componets/Masokowallet";
 // import Pricereview from "./Componets/Semi-components/Pricereview";
 // import MyGhalacard from "./Componets/Semi-components/myGhalacard";
-
- 
-   
 
 // function App() {
 //   const [data, setData] = useState([]);
@@ -97,8 +93,8 @@
 // }
 
 // export default App
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Soko from "./Componets/Soko";
 import Ghalas from "./Componets/Ghalas";
 import Homepage from "./Componets/home";
@@ -106,23 +102,25 @@ import Blogspage from "./Componets/blogspage";
 import Login from "./Componets/login";
 import Signup from "./Componets/signup";
 import Masokowallet from "./Componets/Masokowallet";
-import Ghaladetailview from './Componets/ghaladetailview';
+import Ghaladetailview from "./Componets/ghaladetailview";
+import Api from "./Componets/Semi-components/api";
 
 function App() {
   return (
     <>
-    <Routes>
-        <Route path='/' element={<Homepage/>}></Route>
-        <Route path='/signup' element={<Signup />}></Route>
-        <Route path='/signin' element={<Login />}></Route>
-        <Route path='/soko' element={<Soko />}></Route>
-        <Route path='/blogs' element={<Blogspage />}></Route>
-        <Route path='/ghala' element={<Ghalas />}></Route>
-        <Route path='/mysoko' element={<Masokowallet />}></Route>
-        <Route path='/logout' element={<Homepage />}></Route>
-        <Route path='/ghalaview' element={<Ghaladetailview/>}></Route>
+      <Routes>
+        <Route path="/" element={<Homepage />}></Route>
+        <Route path="/test" element={<Api />}></Route>
+        <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/signin" element={<Login />}></Route>
+        <Route path="/soko" element={<Soko />}></Route>
+        <Route path="/blogs" element={<Blogspage />}></Route>
+        <Route path="/ghala" element={<Ghalas />}></Route>
+        <Route path="/mysoko" element={<Masokowallet />}></Route>
+        <Route path="/logout" element={<Homepage />}></Route>
+        <Route path="/ghalaview" element={<Ghaladetailview />}></Route>
       </Routes>
-     </>
+    </>
   );
 }
 
