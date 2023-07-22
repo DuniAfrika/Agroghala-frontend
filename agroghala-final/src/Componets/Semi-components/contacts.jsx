@@ -1,21 +1,49 @@
 import React from 'react'
 import Morebtn from './morebtn';
+import Navbar from './navbar';
+import Footer from '../footer';
+import { Link } from 'react-router-dom';
 
 function Contacts() {
   return (
-    <div className="p-6 mb-20">
-      <h1 className="mb-8 text-4xl text-green-500 underline ">Contact Us</h1>
-      <div className="flex justify-center">
-        <div className="w-1/2 p-6 border rounded-lg h-80 ">
-          <input
-            type="textarea"
-            placeholder="Please reach out to us..."
-            className="w-full h-full p-8 outline-none"
-          />
-          <Morebtn action="Send" />
-        </div>
-      </div>
-    </div>
+  <div className="flex items-center justify-center h-screen">
+  <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md dark:bg-gray-800">
+  <Link to='/'>
+    <h1 className='text-success py-2'>AGROGHALA</h1>
+  </Link>
+  <legend className='border-bottom pb-2'>Feedback Form</legend>
+    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">
+      Your email
+    </label>
+    <input
+      type="email"
+      id="email"
+      aria-describedby="helper-text-explanation"
+      className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
+      w-full p-2.5 dark:bg-white-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 
+      dark:focus:border-blue-500 focus:border-gray-400 '
+      placeholder="example@agroghala.com"
+    />
+    <label htmlFor="message" className="block mt-4 mb-2 text-sm font-medium text-gray-900 dark:text-black">
+      Your feedback
+    </label>
+    <textarea
+      id="message"
+      rows="4"
+      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 focus:border-gray-400"
+      placeholder="Leave a comment..."
+    ></textarea>
+<button type="button" class="my-3 text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Send Feedback</button>
+    <p id="helper-text-explanation" className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+      We’ll never share your details. Read our{' '}
+      <a href="#" className="font-medium text-green-600 hover:underline dark:text-green-500">
+        Privacy Policy
+      </a>
+      .
+    </p>
+  </div>
+</div>
+
   )
 }
 
