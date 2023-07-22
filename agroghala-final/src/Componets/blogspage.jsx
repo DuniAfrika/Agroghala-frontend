@@ -1,7 +1,7 @@
 import React from "react";
 import Topimg from "../Componets/Images/istockphoto-538889138-612x612.jpg";
 import Card from "./Semi-components/card";
-import Footer from "./footer";
+// import Footer from "./footer";
 import Navbar from "./Semi-components/navbar";
 
 function Blogspage() {
@@ -22,7 +22,7 @@ function Blogspage() {
         <Card />
         <Card />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
