@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Contacts() {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center">
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg dark:bg-gray-800">
         <Link to="/">
           <h1 className="py-2 text-success">AGROGHALA</h1>
