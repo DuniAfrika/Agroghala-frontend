@@ -4,7 +4,7 @@ import axios from 'axios'
 function Api() {
 
     axios.get("http://localhost:8000/api/services/ghala/").then((res)=>{
-        // console.log(res.data)
+        console.log(res.data)
         const Data = res.data
         Data.map((ghala)=>{
             console.log(ghala.title)
