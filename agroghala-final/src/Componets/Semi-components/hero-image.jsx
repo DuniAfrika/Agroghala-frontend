@@ -18,7 +18,7 @@ function Heroimage() {
         <p className="mb-8 text-3xl ">farm to store.</p>
         <p className="text-2xl">
           Easily access vital information, seamless rental of storage
-          facilities, and a direct platform to sell your produce in dynamic
+          facilities, and a direct platform to sell your produce in a dynamic 
           markets.
         </p>
       </div>
