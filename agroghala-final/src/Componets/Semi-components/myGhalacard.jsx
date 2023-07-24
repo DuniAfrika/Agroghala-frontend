@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import locationpin from '../Images/placeholder (2).png'
+import locationpin from "../Images/placeholder (2).png";
 // import Data from "./ghaladata";
 
 function MyGhalacard() {
-  const [Data, setData] = useState([])
-  
+  const [Data, setData] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.get("http://localhost:8000/api/services/ghala/").then((res) => {
       console.log(res.data);
       const Data = res.data;
-      setData(Data)
-      Data.map((ghala) => {
-        return console.log(ghala.title);
-      });
+      setData(Data);
     });
-  },[])
+  }, []);
   return (
     <div className="flex flex-col my-6 md:gap-12 md:grid-cols-4 md:grid">
       {Data.map((ghala) => {

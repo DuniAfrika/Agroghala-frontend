@@ -1,10 +1,9 @@
 import React from "react";
-
 import card1 from "../Images/image 5 (2).png";
 
 function Card() {
   return (
-    <div className="flex flex-col max-w-sm mx-auto mt-4 overflow-hidden rounded-lg shadow-md hover:scale-[1.05] ease-linear duration-500">
+    <div className="flex flex-col max-w-sm mx-auto mt-4 overflow-hidden rounded-lg shadow-md   ">
       <div className="">
         <img src={card1} alt="cardtop" className="object-cover w-full h-80 " />
       </div>
