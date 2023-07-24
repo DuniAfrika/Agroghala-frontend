@@ -5,14 +5,16 @@ const currentYear = new Date().getFullYear();
 function Footer(){
     return (
     <footer class="bg-white dark:bg-gray-900 pb-0 px-5">
-    <div class="w-full max-w-screen-xl lg:py-8">
+    <div class="w-full max-w-screen-xl lg:py-8 phone">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-              <a href="#" class="flex items-center">
-                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Agroghala</span>
+              <Link to='/'>
+              <a class="flex items-center">
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-green-900">AGROGHALA</span>
               </a>
+              </Link>
           </div>
-          <div class="grid grid-cols-6 gap-8 sm:gap-6 sm:grid-cols-4">
+          <div class="grid grid-cols-6 gap-8 sm:gap-6 sm:grid-cols-4 phone">
           <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Contact Us</h2>
                   <ul class="text-gray-500 dark:text-gray-400 font-medium">

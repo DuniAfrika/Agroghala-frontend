@@ -3,18 +3,15 @@ import Heropic from "../Images/smiley.jpg";
 
 function Heroimage() {
   return (
-    <div className="relative pt-20">
-      <img src={Heropic} alt="happy farmers" className="" />
-      <div className="absolute w-1/3 text-center text-white top-32 right-4">
-        <h1 className="text-3xl font-extrabold tracking-wider">AGROGHALA</h1>
-        <p className="mb-8 text-3xl ">farm to store</p>
-        <p className="text-2xl">
-          Easily access vital information, seamless rental of storage
+  <div class="card bg-dark text-white">
+  <img class="card-img" src={Heropic} alt="happy farmers" />
+  <div class="card-img-overlay d-flex justify-content-end align-items-center row">
+    <h5 class="card-title text-center border-bottom">AGROGHALA</h5>
+    <p class="card-text">Easily access vital information, seamless rental of storage
           facilities, and a direct platform to sell your produce in dynamic
-          markets.
-        </p>
-      </div>
+          markets.</p>
     </div>
+  </div>
   );
 }
 
