@@ -104,6 +104,7 @@ import Signup from "./Componets/signup";
 import Masokowallet from "./Componets/Masokowallet";
 import Ghaladetailview from "./Componets/ghaladetailview";
 import Api from "./Componets/Semi-components/api";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (

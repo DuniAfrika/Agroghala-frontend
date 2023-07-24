@@ -7,7 +7,7 @@ function Api() {
         console.log(res.data)
         const Data = res.data
         Data.map((ghala)=>{
-            console.log(ghala.title)
+            return console.log(ghala.title);
         })
     })
   return (
