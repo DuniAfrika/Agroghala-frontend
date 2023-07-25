@@ -15,8 +15,11 @@ export default function RentCheckout({ selectedSoko, onClose }) {
   
 
   const handleInputChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [event.target.name]: event.target.value
+    }));
+  };  
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();

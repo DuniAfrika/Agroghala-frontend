@@ -1,7 +1,4 @@
 import React from 'react'
-import Morebtn from './morebtn';
-import Navbar from './navbar';
-import Footer from '../footer';
 import { Link } from 'react-router-dom';
 
 function Contacts() {
