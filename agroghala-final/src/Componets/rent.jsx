@@ -40,7 +40,7 @@ function Rent() {
       <div class="bg-white">
         {selectedGhala ? (
           <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-12 lg:px-0">
-            <div class="relative isolate renting overflow-hidden bg-green-700 px-24 pt-16 shadow-2xl sm:rounded-3xl 
+            <div class="relative isolate overflow-hidden bg-green-700 px-24 pt-16 shadow-2xl sm:rounded-3xl 
             sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:pr-24 lg:pl-5 lg:pt-0">
               <svg viewBox="0 0 1024 1024" class="absolute -translate-x-1/2 top-1/2 -z-0 h-[64rem] w-[64rem] -translate-y-1/2 
               [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 

@@ -13,7 +13,7 @@ function CreateBlog() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
    // Assuming you have the currentUser data stored in localStorage
-   const currentUser = JSON.parse(localStorage.getItem('user'));
+  const currentUser = JSON.parse(localStorage.getItem('user'));
 
   const handleInputChange = (event) => {
     setFormData({ ...formdata, [event.target.name]: event.target.value });

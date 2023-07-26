@@ -155,3 +155,6 @@ input[type="text"]:focus {
 .rent-buttons {
     width: 6rem;
 }
+.renting {
+    border-radius: 0;
+}
