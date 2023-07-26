@@ -52,7 +52,7 @@ export default function RentCheckout({ selectedSoko, onClose }) {
   };
 
   return (
-    <div className='text-white'>
+    <div>
       <form onSubmit={handleFormSubmit}>
         <div>
           <Link to="/">
@@ -72,7 +72,7 @@ export default function RentCheckout({ selectedSoko, onClose }) {
           />
           </div>
           <div className='mt-3'>
-          <button type="submit" className='text-white mr-5'>Checkout</button>
+          <button type="submit" className='mr-5'>Checkout</button>
           <button className="rounded-md btn btn-danger" onClick={onClose}>
                 Cancel
         </button>
