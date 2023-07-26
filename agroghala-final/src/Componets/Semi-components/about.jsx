@@ -7,11 +7,11 @@ function About() {
       <div className="my-5">
         <h1 className="mb-8 text-2xl text-success font-medium">About Us</h1>
         <div className="phone d-flex justify-content-between align-items-center">
-          <div className="classical border-solid border-2 border-gray-500 ...">
+          <div className="classical rounded-md">
             <img
               src={Logo}
               alt="agroghala logo"
-              className="rounded-sm border-gray-900"
+              className="shadow"
             />
           </div>
           <p className="px-10 text-2xl">

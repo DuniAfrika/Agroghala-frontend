@@ -39,7 +39,7 @@ export default function RentCheckout({ selectedGhala, onClose }) {
     try {
 
       const response = await axios.post(
-        'http://127.0.0.1:8000/api/myproducts/myghala/',
+        'http://localhost:8000/api/myproducts/myghala/',
         formData
       );
 
@@ -68,7 +68,7 @@ export default function RentCheckout({ selectedGhala, onClose }) {
           <input
             type="text"
             className="form-control"
-            name="title"
+            name="bags_sold"
             value={formData.bags_sold}
             onChange={handleInputChange}
             placeholder="Number of bags"
@@ -80,7 +80,7 @@ export default function RentCheckout({ selectedGhala, onClose }) {
           <input
             type="text"
             className="form-control"
-            name="title"
+            name="duration_of_storage"
             value={formData.duration_of_storage}
             onChange={handleInputChange}
             placeholder="Duration"

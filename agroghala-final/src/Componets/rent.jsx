@@ -39,11 +39,11 @@ function Rent() {
     <>
       <div class="bg-white">
         {selectedGhala ? (
-          <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-12 lg:px-0">
+          <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-12 lg:px-12">
             <div class="relative isolate overflow-hidden bg-green-700 px-24 pt-16 shadow-2xl sm:rounded-3xl 
-            sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:pr-24 lg:pl-5 lg:pt-0">
+            sm:px-16 md:pt-10 lg:flex lg:gap-x-20 lg:pr-24 lg:pl-5 lg:pt-0 lg:mt-5 sm:mt-0">
               <svg viewBox="0 0 1024 1024" class="absolute -translate-x-1/2 top-1/2 -z-0 h-[64rem] w-[64rem] -translate-y-1/2 
-              [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 
+              [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-1/2 sm:-ml-80 
               lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0" aria-hidden="true">
                 <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
                 <defs>
@@ -68,12 +68,12 @@ function Rent() {
                 </div>
                 <div className='text-white text-left font-bold flex justify-start row'>
                 <p className='mt-2'>Start Price : Ksh {selectedGhala.start_price}</p>
-                <p>Rent Price : Ksh {selectedGhala.rent_price} per month</p>
+                <p>Rent Price : Ksh {selectedGhala.rent_price} per month per 90kg bag</p>
                 </div>
                 <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                  <a href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm rent-buttons
+                  <button href="#" class="rounded-md bg-white px-3.5 py-2.5 text-sm rent-buttons
                   font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline 
-                  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white" onClick={handleRentButtonClick}>Rent</a>
+                  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white cursor:pointer" onClick={handleRentButtonClick}>Rent</button>
                 </div>
               </div>
               <div class="relative mt-16 h-80 lg:mt-8">

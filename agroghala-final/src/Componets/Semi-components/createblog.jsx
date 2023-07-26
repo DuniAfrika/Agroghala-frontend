@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-function CreateBlog() {
+function CreateBlog({ onClose }) {
   const [formdata, setFormData] = useState({
-    author: currentUser,
     title: '',
     content: '',
   });
@@ -12,8 +11,6 @@ function CreateBlog() {
   const [errorMessage, setErrorMessage] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
-   // Assuming you have the currentUser data stored in localStorage
-  const currentUser = JSON.parse(localStorage.getItem('user'));
 
   const handleInputChange = (event) => {
     setFormData({ ...formdata, [event.target.name]: event.target.value });
@@ -39,7 +36,7 @@ function CreateBlog() {
     try {
 
       // Post the blog data to the backend
-      const response = await axios.post('http://your-backend-api-url/api/blogs/blogs/',
+      const response = await axios.post('http://localhost:8000/api/blogs/blogs/',
         formdata
       );
 
@@ -102,7 +99,7 @@ function CreateBlog() {
               Post Blog <span aria-hidden="true" className="ml-2">→</span>
             </button>
             <Link to="/blogs">
-              <button className="text-sm text-center font-semibold leading-6 text-gray-900">
+              <button className="text-sm text-center font-semibold leading-6 text-gray-900" onClick={onClose}>
                 Cancel
               </button>
             </Link>
