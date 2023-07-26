@@ -3,8 +3,23 @@ import Topimg from "../Componets/Images/istockphoto-538889138-612x612.jpg";
 import Card from "./Semi-components/card";
 import Navbar from "./Semi-components/navbar";
 import Footer from "./Semi-components/footer[1]";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 
 function Blogspage() {
+  const [blog, setBlog] = useState([]);
+  useEffect(() => {
+    try {
+      axios.get("http://localhost:8000/api/blogs/blogs").then((res) => {
+        console.log(res.data);
+        const Blogs = res.data;
+        setBlog(Blogs);
+      });
+    } catch (error) {
+      console.error(error.message);
+    }
+  }, []);
   return (
     <div>
       <Navbar />
@@ -31,13 +46,22 @@ function Blogspage() {
       <h1 className="text-xl font-bold md:mx-12">
         Rooted Words: Echoes of Our Farmers, Resonating with Nature!
       </h1>
-      <div className="md:grid grid-cols-4 gap-4 px-4 mt-4 mb-4">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+      <div className="md:grid grid-cols-2 gap-16 mt-8 px-4 ">
+        {
+          blog.map((blogposts)=>{
+            return (
+              <div>
+                {
+                  <Card
+                    content={blogposts.content}
+                    image={blogposts.image}
+                    title={blogposts.title}
+                  />
+                }
+              </div>
+            );
+          })
+        }
       </div>
       <Footer />
     </div>

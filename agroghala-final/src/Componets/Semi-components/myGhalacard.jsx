@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import locationpin from "../Images/placeholder (2).png";
+import { Link } from "react-router-dom";
 // import Data from "./ghaladata";
 
 function MyGhalacard() {
@@ -14,7 +15,7 @@ function MyGhalacard() {
     });
   }, []);
   return (
-    <div className="flex flex-col my-6 md:gap-12 md:grid-cols-4 md:grid">
+    <div className="flex flex-col my-6 md:gap-12 md:grid-cols-4 md:grid px-2 md:px-6">
       {Data.map((ghala) => {
         return (
           <div className="overflow-hidden rounded-lg shadow-lg">
@@ -36,6 +37,14 @@ function MyGhalacard() {
                 <div className="flex items-center w-1/3 py-1 my-2 font-bold text-center truncate ">
                   <img src={locationpin} alt="pin" />
                   <p className="px-1">{ghala.location}</p>
+                </div>
+                <div className="bg-green-500 text-center  rounded-md font-semibold text-white flex">
+                  <Link
+                    to={`ghala/${ghala.id}`}
+                    className="  w-full h-full p-2"
+                  >
+                    View Ghala
+                  </Link>
                 </div>
               </div>
             </div>
