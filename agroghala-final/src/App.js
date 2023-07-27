@@ -12,6 +12,7 @@ import Rentghala from "./Componets/rent";
 import Sellcommodity from "./Componets/Sell"
 import Contact from './Componets/Semi-components/contacts';
 import CreateBlog from './Componets/Semi-components/createblog';
+import ChatWidget from './Componets/assistant';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/myghala' element={<Myghala />}></Route>
         <Route path='/logout' element={<Homepage />}></Route>
       </Routes>
+      <ChatWidget />
      </>
   );
 }
