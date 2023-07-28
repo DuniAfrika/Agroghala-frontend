@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -11,6 +11,13 @@ function CreateBlog({ onClose }) {
   const [errorMessage, setErrorMessage] = useState('');
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  const getCsrfToken = () => {
+    const csrfToken = document.cookie.split('; ')
+      .find(cookie => cookie.startsWith('csrftoken='))
+      .split('=')[1];
+    return csrfToken;
+  };
 
   const handleInputChange = (event) => {
     setFormData({ ...formdata, [event.target.name]: event.target.value });
@@ -34,10 +41,16 @@ function CreateBlog({ onClose }) {
       return;
     }
     try {
+      // Get CSRF token from cookies
+      const csrfToken = getCsrfToken();
 
       // Post the blog data to the backend
       const response = await axios.post('http://localhost:8000/api/blogs/blogs/',
-        formdata
+        formdata, {
+          headers: {
+            'X-CSRFToken': csrfToken,
+          },
+        }
       );
 
       if (response.status === 201) {
@@ -52,6 +65,17 @@ function CreateBlog({ onClose }) {
       setErrorMessage('An error occurred while posting the blog');
     }
   };
+  useEffect(() => {
+    // Fetch the CSRF token from the backend when the component mounts
+    axios.get('http://localhost:8000/api/csrf/')
+      .then(response => {
+        // Optionally, you can store the CSRF token in the component state for later use
+        // setCsrfToken(response.data.csrfToken);
+      })
+      .catch(error => {
+        console.error('Error fetching CSRF token:', error);
+      });
+  }, []);
 
   return (
     <div className="d-flex items-center justify-center">
