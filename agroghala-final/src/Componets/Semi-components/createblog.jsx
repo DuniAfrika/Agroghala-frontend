@@ -1,138 +1,107 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from 'react';
 
-function CreateBlog({ onClose }) {
-  const [formdata, setFormData] = useState({
-    title: '',
-    content: '',
-  });
+// Define the getCookie function
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+const CreateBlog = () => {
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+  const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
-  const [error, setError] = useState(null);
-  const navigate = useNavigate();
 
-  const getCsrfToken = () => {
-    const csrfToken = document.cookie.split('; ')
-      .find(cookie => cookie.startsWith('csrftoken='))
-      .split('=')[1];
-    return csrfToken;
-  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  const handleInputChange = (event) => {
-    setFormData({ ...formdata, [event.target.name]: event.target.value });
-  };
+    const csrftoken = getCookie('csrftoken');
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
+    const newBlog = {
+      title: title,
+      content: content,
+    };
 
-    if (!formdata.title) {
-      setError({
-        field: 'title',
-        message: 'Enter a title',
-      });
-      return;
-    }
-    if (!formdata.content) {
-      setError({
-        field: 'content',
-        message: 'Some content please',
-      });
-      return;
-    }
-    try {
-      // Get CSRF token from cookies
-      const csrfToken = getCsrfToken();
-
-      // Post the blog data to the backend
-      const response = await axios.post('http://localhost:8000/api/blogs/blogs/',
-        formdata, {
-          headers: {
-            'X-CSRFToken': csrfToken,
-          },
+    fetch('http://localhost:8000/api/blogs/blogs/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': csrftoken,
+      },
+      body: JSON.stringify(newBlog),
+    })
+      .then((response) => {
+        // Check if the response is successful (status code 2xx)
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
-      );
-
-      if (response.status === 201) {
-        setSuccessMessage('Blog posted successfully!');
-        // Redirect to another page after successful blog posting
-        navigate('/blogs');
-      } else {
-        setErrorMessage('Unable to post blog');
-      }
-    } catch (error) {
-      console.error('Error posting blog:', error);
-      setErrorMessage('An error occurred while posting the blog');
-    }
-  };
-  useEffect(() => {
-    // Fetch the CSRF token from the backend when the component mounts
-    axios.get('http://localhost:8000/api/csrf/')
-      .then(response => {
-        // Optionally, you can store the CSRF token in the component state for later use
-        // setCsrfToken(response.data.csrfToken);
+        return response.json();
       })
-      .catch(error => {
-        console.error('Error fetching CSRF token:', error);
+      .then((data) => {
+        // Handle the success response here
+        console.log(data);
+        setSuccessMessage('Blog created successfully!');
+        setError('');
+        // You can perform additional actions after successful creation, if needed
+      })
+      .catch((error) => {
+        // Handle any errors here
+        console.error('Error:', error);
+        setError('Error creating the blog. Please try again later.');
+        setSuccessMessage('');
       });
-  }, []);
+  };
+
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
+
+  const handleContentChange = (event) => {
+    setContent(event.target.value);
+  };
 
   return (
-    <div className="d-flex items-center justify-center">
-      <div className="card shadow p-3">
-        {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
-        <Link to="/">
-          <h2 className="font-medium pb-3">AGROGHALA</h2>
-        </Link>
-        <legend className="border-bottom text-center mb-3 text-muted">Post your Blog</legend>
-        <form onSubmit={handleFormSubmit}>
-          <div className="mb-3">
-            <label htmlFor="title" className="form-label">
-              Title
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              name="title"
-              value={formdata.title}
-              onChange={handleInputChange}
-              placeholder="Title"
-              required
-            />
-          </div>
-          <div className="mb-2">
-            <label htmlFor="content" className="form-label">
-              Content
-            </label>
-            <textarea
-              className="form-control"
-              name="content"
-              value={formdata.content}
-              onChange={handleInputChange}
-              rows="4"
-              placeholder="Inform other farmers with a blog..."
-              required
-            ></textarea>
-          </div>
-
-          <div className="mt-5 flex items-center justify-start gap-y-6 px-5 row">
-            <button
-              type="submit"
-              className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white border-gray-900"
-            >
-              Post Blog <span aria-hidden="true" className="ml-2">→</span>
-            </button>
-            <Link to="/blogs">
-              <button className="text-sm text-center font-semibold leading-6 text-gray-900" onClick={onClose}>
-                Cancel
-              </button>
-            </Link>
-          </div>
-        </form>
-        {successMessage && <div className="alert alert-success">{successMessage}</div>}
-      </div>
+    <div className="mx-auto max-w-lg px-4 py-8">
+      <h2 className="text-2xl font-bold mb-4">Create a New Blog</h2>
+      {error && <p className="text-red-500 mb-2">{error}</p>}
+      {successMessage && <p className="text-green-500 mb-2">{successMessage}</p>}
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <label htmlFor="title" className="block font-bold mb-1">
+            Title:
+          </label>
+          <input
+            type="text"
+            id="title"
+            value={title}
+            onChange={handleTitleChange}
+            required
+            className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="content" className="block font-bold mb-1">
+            Content:
+          </label>
+          <textarea
+            id="content"
+            value={content}
+            onChange={handleContentChange}
+            required
+            className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+            rows="6"
+          />
+        </div>
+        <button
+          type="submit"
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          Create Blog
+        </button>
+      </form>
     </div>
   );
-}
+};
 
 export default CreateBlog;

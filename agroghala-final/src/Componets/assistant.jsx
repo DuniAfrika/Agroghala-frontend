@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const ChatWidget = () => {
   useEffect(() => {
     window.watsonAssistantChatOptions = {
-      integrationID: "91572ca7-4c8c-4214-9f3f-0fe88ac37fe4",
+      integrationID: "72a3b049-e0b9-4fd0-b451-6a4c0e4930a1",
       region: "au-syd",
       serviceInstanceID: "e2c5cdec-124b-426c-96ae-24de5cf34605",
       onLoad: function(instance) { instance.render(); }
