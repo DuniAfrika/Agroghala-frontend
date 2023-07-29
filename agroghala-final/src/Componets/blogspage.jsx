@@ -45,14 +45,16 @@ const BlogsPage = () => {
 
   return (
     <>
-      <div className="container mt-2 px-5 pt-5">
-      <div className="homepage relative h-screen mb-5">
+      <div className="container mt-2 mx-0 pt-5">
+      <div className="blog-image relative h-screen mb-5">
       <img
         src={Image}
         alt="farmer"
         className="absolute inset-0 object-cover w-full h-full"
       />
-      <div className="absolute bottom-4 left-0 right-0 text-white text-center text-4xl font-bold border-white border-l-4">
+      <div className="absolute bottom-4 left-0 right-0 text-white text-left
+      ml-12 pl-5
+      text-4xl font-bold border-white border-l-4">
         Hear what other farmers have to say today
       </div>
     </div>

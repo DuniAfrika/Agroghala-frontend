@@ -39,7 +39,7 @@ export default function RentCheckout({ selectedGhala, onClose }) {
     try {
 
       const response = await axios.post(
-        'http://localhost:8000/api/myproducts/myghala/',
+        'http://127.0.0.1:8000/api/myproducts/myghala/',
         formData
       );
 
