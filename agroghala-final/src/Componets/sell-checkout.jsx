@@ -40,7 +40,9 @@ export default function RentCheckout({ selectedSoko, onClose }) {
       
       const response = await axios.post(
         'http://127.0.0.1:8000/api/myproducts/mysoko/',
-        formData
+        formData, {
+          withCredentials: true
+        }
       );
 
       if (response.status === 201) {

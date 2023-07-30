@@ -7,7 +7,7 @@ function Navbar() {
 
   useEffect(() => {
     // Check if token exists in local storage
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('authToken');
     if (token) {
       setAuthenticated(true);
     }

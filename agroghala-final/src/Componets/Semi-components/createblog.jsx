@@ -1,68 +1,72 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
-// Define the getCookie function
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
+/**
+ * CreateBlog Component
+ * Renders a form to create a new blog with title and content fields.
+ * Uses the Django backend API to submit the blog data and handle CSRF token.
+ */
 const CreateBlog = () => {
+  // State variables to store the form data, error, and success messages
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [error, setError] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
 
-  const handleSubmit = (event) => {
+  // Function to handle form submission
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const csrftoken = getCookie('csrftoken');
+    // Fetch CSRF token from the backend
+    try {
+      const csrfresponse = await axios.get('http://127.0.0.1:8000/api/csrf/');
+      const csrfToken = csrfresponse.data.csrfToken;
 
-    
+      // Set CSRF token in Axios headers for secure form submission
+      axios.defaults.headers.post['X-CSRFToken'] = csrfToken;
 
-    const newBlog = {
-      title: title,
-      content: content,
-    };
+      // Create the blog data object
+      const newBlog = {
+        title: title,
+        content: content,
+      };
 
-    fetch('http://127.0.0.1:8000/api/blogs/create-blog/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-CSRFToken': csrftoken,
-      },
-      body: JSON.stringify(newBlog),
-    })
-      .then((response) => {
-        // Check if the response is successful (status code 2xx)
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+      // Make a POST request to the backend API to create the blog
+      const response = await axios.post(
+        'http://127.0.0.1:8000/api/blogs/create-blog/',
+        newBlog,
+        {
+          withCredentials: true, // Include cookies for CSRF protection
+          headers: {
+            'Content-Type': 'application/json',
+          },
         }
-        return response.json();
-      })
-      .then((data) => {
-        // Handle the success response here
-        console.log(data);
-        setSuccessMessage('Blog created successfully!');
-        setError('');
-        // You can perform additional actions after successful creation, if needed
-      })
-      .catch((error) => {
-        // Handle any errors here
-        console.error('Error:', error);
-        setError('Error creating the blog. Please try again later.');
-        setSuccessMessage('');
-      });
+      );
+
+      // Handle the success response
+      console.log(response.data);
+      setSuccessMessage('Blog created successfully!');
+      setError('');
+      // You can perform additional actions after successful creation, if needed
+    } catch (error) {
+      // Handle any errors
+      console.error('Error:', error);
+      setError('Error creating the blog. Please try again later.');
+      setSuccessMessage('');
+    }
   };
 
+  // Function to handle title input change
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
   };
 
+  // Function to handle content input change
   const handleContentChange = (event) => {
     setContent(event.target.value);
   };
 
+  // Render the CreateBlog component
   return (
     <div className="mx-auto max-w-lg px-4 py-8">
       <h2 className="text-2xl font-bold mb-4">Create a New Blog</h2>
@@ -97,7 +101,8 @@ const CreateBlog = () => {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 
+          focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           Create Blog
         </button>

@@ -121,7 +121,7 @@ function Rent() {
         {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white hover:border-white shadow p-8 rounded-md">
+          <div className="bg-white hover:border-white shadow p-8 rounded-md mt-5">
             <Checkout selectedGhala={selectedGhala} onClose={handleCloseModal} />
           </div>
         </div>
