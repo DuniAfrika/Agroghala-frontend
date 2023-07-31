@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 function Contacts() {
+  const [formData, setFormData] = useState({
+    email: '',
+    message: '',
+  });
+
+
+
   return (
   <div className="flex items-center justify-center h-screen">
   <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md dark:bg-gray-800">
@@ -14,7 +21,7 @@ function Contacts() {
     </label>
     <input
       type="email"
-      id="email"
+      name="email"
       aria-describedby="helper-text-explanation"
       className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
       w-full p-2.5 dark:bg-white-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 
@@ -25,7 +32,7 @@ function Contacts() {
       Your feedback
     </label>
     <textarea
-      id="message"
+      name="message"
       rows="4"
       className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 
       focus:border-blue-500 dark:bg-white-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-900 
