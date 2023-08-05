@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 /**
  * CreateBlog Component
  * Renders a form to create a new blog with title and content fields.
  * Uses the Django backend API to submit the blog data and handle CSRF token.
  */
-const CreateBlog = () => {
+const CreateBlog = ({onClose}) => {
   // State variables to store the form data, error, and success messages
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -69,12 +70,15 @@ const CreateBlog = () => {
   // Render the CreateBlog component
   return (
     <div className="mx-auto max-w-lg px-4 py-8">
-      <h2 className="text-2xl font-bold mb-4">Create a New Blog</h2>
+      <div className='flex justify-between'>
+        <Link to='/'><h3 className='text-green-700 mb-2 text-2x1'>AGROGHALA</h3></Link>
+      </div>
+      <h2 className="text-2xl font-medium mb-2 pb-2 border-bottom">Inform others</h2>
       {error && <p className="text-red-500 mb-2">{error}</p>}
       {successMessage && <p className="text-green-500 mb-2">{successMessage}</p>}
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="title" className="block font-bold mb-1">
+          <label htmlFor="title" className="block mb-1 popup">
             Title:
           </label>
           <input
@@ -83,11 +87,11 @@ const CreateBlog = () => {
             value={title}
             onChange={handleTitleChange}
             required
-            className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full px-2 py-2 border rounded focus:outline-none focus:border-blue-500"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="content" className="block font-bold mb-1">
+          <label htmlFor="content" className="block mb-1">
             Content:
           </label>
           <textarea
@@ -95,17 +99,24 @@ const CreateBlog = () => {
             value={content}
             onChange={handleContentChange}
             required
-            className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"
+            className="w-full px-2 py-2 border rounded focus:outline-none"
             rows="6"
           />
         </div>
+        <div className='grid grid-cols-2 gap-3 ml-12 pl-24'>
+        <button onClick={onClose}
+        className='bg-red-600 text-white py-2 px-4 rounded hover:bg-red-800 
+        focus:outline-none hover:shadow-md'
+        >
+          Cancel
+        </button>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 
-          focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-          Create Blog
+          className="text-white bg-green-600 py-2 px-4 rounded hover:bg-green-800 
+          focus:outline-none hover:shadow-md"
+        > Post
         </button>
+        </div>
       </form>
     </div>
   );

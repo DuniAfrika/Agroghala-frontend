@@ -36,8 +36,8 @@ function Navbar() {
                 <ul className='nav-links font-medium navbar-style'>
                     <Link to='/'><li>Home</li></Link>
                     <Link to='/blogs'><li>Blogs</li></Link>
-                    <Link to='/contact'><li>Contact Us</li></Link>
-                    <Link to='/about'><li>About</li></Link>
+                    <li href='#contact'>Contact Us</li>
+                    <li href='#about'>About</li>
                     {authenticated ? (
                         <Link to='/logout' onClick={handleLogout}>
                         <li>Logout</li>

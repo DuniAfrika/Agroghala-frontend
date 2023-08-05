@@ -25,7 +25,7 @@ function Sokos() {
   };
   return (
     <>
-    <div className="grid grid-cols-3 gap-5 px-5">
+    <div className="pt-24 grid grid-cols-3 gap-5 px-5">
       {sokoItems.map((item) => (
         <div className={`max-w-lg p-6 bg-white border 
         border-gray-200 rounded-lg m-3

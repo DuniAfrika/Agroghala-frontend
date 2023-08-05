@@ -13,12 +13,16 @@ const formatDate = (dateString) => {
 const BlogsPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [selectedBlog, setSelectedBlog] = useState(null);
 
   const handleCreateBlog = () => {
-    setIsModalOpen(true);
+    setIsCreateModalOpen(true);
   };
 
+  const handleFinishedCreateBlog = () => {
+    setIsCreateModalOpen(false);
+  }
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
@@ -60,7 +64,10 @@ const BlogsPage = () => {
     </div>
         <a
           type="button"
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium 
+          text-center text-white bg-green-700 rounded-lg hover:bg-green-800 
+          focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 
+          dark:hover:bg-green-700 dark:focus:ring-green-800"
           onClick={handleCreateBlog}
         >
           Inform others with a Blog
@@ -97,30 +104,12 @@ const BlogsPage = () => {
                     <p className="text-muted ">{formatDate(blog.date_posted)}</p>
                   </div>
                   <h3 className="card-title fw-bold">{blog.title}</h3>
-                  <p className="card-text">{blog.content}</p>
+                  <p className="card-text">
+                    {blog.content} 
+                  </p>
+                  <a className='text-green-500 cursor-pointer'onClick={() => handleReadMore(blog)}>Read more</a>
                 </div>
                 <div className="d-flex justify-content-start p-3">
-                  <button
-                    onClick={() => handleReadMore(blog)}
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                  >
-                    Read More
-                    <svg
-                      className="w-3.5 h-3.5 ml-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
-                  </button>
                 </div>
               </div>
             </div>
@@ -157,23 +146,21 @@ const BlogsPage = () => {
                     dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
                   >
                     Close
-                    <svg
-                      className="w-3.5 h-3.5 ml-2"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 14 10"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M1 5h12m0 0L9 1m4 4L9 9"
-                      />
-                    </svg>
                   </a>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+     {/* Conditional rendering of the Create Blog modal */}
+     {isCreateModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="hover:border-white shadow rounded-md backdrop-blur-xl">
+            <div className="max-w-lg px-6 pt-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 overflow-hidden">
+              <div className="card-body">
+                {/* Render the CreateBlog component inside the modal */}
+                <CreateBlog onClose={handleFinishedCreateBlog} />
               </div>
             </div>
           </div>

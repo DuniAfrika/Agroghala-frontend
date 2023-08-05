@@ -78,8 +78,10 @@ function Homepage() {
         </div>
       </div>
       </div>
-      
+      <div id='about'>
       <About />
+      </div>
+      
       <div className='bg-green-100 rounded-top-lg py-3'>
       <h1 className="mb-8 text-2xl text-success my-2 mx-5 font-medium"> Some Blogs</h1>
       <div className='px-5 grid grid-cols-3 gap-5'>

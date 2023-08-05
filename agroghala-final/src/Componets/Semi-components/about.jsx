@@ -6,7 +6,7 @@ function About() {
     <div className="px-5">
       <div className="my-5">
         <h1 className="mb-8 text-2xl text-success font-medium">About Us</h1>
-        <div className="phone d-flex justify-content-between align-items-center">
+        <div className="d-flex justify-between align-items-center md:grid md:gap-2">
           <div className="classical rounded-md">
             <img
               src={Logo}
