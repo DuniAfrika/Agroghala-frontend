@@ -3,14 +3,14 @@
 - The Issue we are hoping to solve
 - How our tech solution can help
 - Our idea
-### Technology Implementation
+### [Technology Implementation](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/README.md#technology-implementation)
 - IBM AI Services used
 - Other IBM technologies used
 - Solution Architecture Diagram
-### Presentation Materials
+### [Presentation Materials](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/README.md#presentation-materials)
 - Solution Video
 - Project Development Roadmap
-### How to run the project
+### [How to run the project](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/README.md#how-to-run-the-project)
 - Running the frontend on local machine
 
 ## Project Summary
@@ -48,15 +48,15 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 ### Project Development Roadmap
 ## How to run this project 
 ### Running the frontend on your local machine
-Clone the repository using this specific line in your CLI `git clone -b Robert_branch https://github.com/DuniAfrika/Agroghala-frontend`
+- Clone the repository using this specific line in your CLI `git clone -b Robert_branch https://github.com/DuniAfrika/Agroghala-frontend`
 
-navigate to the root of your directory `agroghala_final`
+- navigate to the root of your directory `agroghala_final`
 
-Install node modules by running `npm install`
+- Install node modules by running `npm install`
 
-To start the development server run `npm start`
+- To start the development server run `npm start`
 
-This will run your frontend [here](https://localhost:3000)
+- This will run your frontend [here](https://localhost:3000)
 
-Make sure to start your backend for authentication.
-Login credentials are given in the [backend README.md]()
+**Make sure to start your backend for authentication.**
+*Login credentials are given in the [backend README.md]()*
