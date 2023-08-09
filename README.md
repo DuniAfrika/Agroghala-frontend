@@ -15,9 +15,9 @@
 
 ## Project Summary
 ### The Issue we are hoping to solve
-We're revolutionizing Sub-Saharan Africa's agriculture by solving food insecurity as a result of storage-driven post-harvest losses. By implementing innovative storage solutions and empowering local farmers with modern technologies, we aim to create a sustainable and resilient food supply chain that positively impacts communities across the region.
+We're revolutionizing Sub-Saharan Africa's agriculture by solving **food insecurity** as a result of **storage-driven post-harvest losses**. By implementing innovative storage solutions and empowering local farmers with modern technologies, we aim to create a **sustainable and resilient food supply chain** that positively impacts communities across the region.
 ### How Our tech solution can help
-We're revolutionizing Sub-Saharan Africa's agriculture by solving storage-driven post-harvest losses. Our platform unites local farmers with quality nearby warehouses and empowers direct selling through real-time market insights, bypassing intermediaries. Discover loss-reduction strategies on our insightful blog.
+Our platform connects farmers to warehouses, enables direct sales, and offers loss-reduction strategies on the blog.
 ### Our Idea
 In Sub-Saharan Africa, a serious challenge threatens food security due to on-farm storage loss. Small-scale farmers here struggle with significant grain losses during crucial stages like harvesting, handling, and storage.
 
@@ -46,6 +46,18 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 ## Presentation Materials
 ### Youtube solution video
 ### Project Development Roadmap
+Currently a farmer can do the following:
+- Registration and Login
+- View and Read Blog Posts
+- View and Rent warehouses that are pre-defined in the system
+- View commodity prices and sell a commodity
+  
+In the future we plan to :
+
+- 
+- 
+
+
 ## How to run this project 
 ### Running the frontend on your local machine
 - Clone the repository using this specific line in your CLI `git clone -b Robert_branch https://github.com/DuniAfrika/Agroghala-frontend`
@@ -59,4 +71,5 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 - This will run your frontend [here](https://localhost:3000)
 
 **Make sure to start your backend for authentication.**
-*Login credentials are given in the [backend README.md]()*
+
+**Note:** *Login credentials are given in the [backend README.md]()*
