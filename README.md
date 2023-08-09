@@ -51,7 +51,9 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 Clone the repository using this specific line in your CLI `git clone -b Robert_branch https://github.com/DuniAfrika/Agroghala-frontend`
 
 navigate to the root of your directory `agroghala_final`
+
 Install node modules by running `npm install`
+
 To start the development server run `npm start`
 
 This will run your frontend [here](https://localhost:3000)
