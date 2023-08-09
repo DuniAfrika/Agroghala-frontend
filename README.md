@@ -1,4 +1,4 @@
-## Agroghala
+# Agroghala Frontend
 ### [Project Summary](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/README.md#project-summary-1)
 - The Issue we are hoping to solve
 - How our tech solution can help
