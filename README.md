@@ -41,3 +41,20 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 ### IBM AI Services Used
 [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant)
 - By incorporating IBM Watson Assistant into our website, our customer support system now offers answers to user queries and helps them navigate the site. This trained chatbot provides guidance on platform features, aiding users after their initial inquiries. This boosts user experience, speeds up support, and empowers users to explore independently. The benefits include personalized help, immediate support, and improved self-navigation, leading to higher customer satisfaction and engagement.
+
+### Solution Architecture Diagram
+## Presentation Materials
+### Youtube solution video
+### Project Development Roadmap
+## How to run this project 
+### Running the frontend on your local machine
+Clone the repository using this specific line in your CLI `git clone -b Robert_branch https://github.com/DuniAfrika/Agroghala-frontend`
+
+navigate to the root of your directory `agroghala_final`
+Install node modules by running `npm install`
+To start the development server run `npm start`
+
+This will run your frontend [here](https://localhost:3000)
+
+Make sure to start your backend for authentication.
+Login credentials are given in the [backend README.md]()
