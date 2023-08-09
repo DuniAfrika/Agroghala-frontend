@@ -9,6 +9,8 @@ import Signup from "./Componets/signup";
 import Masokowallet from "./Componets/Masokowallet";
 import Ghaladetailview from "./Componets/ghaladetailview";
 import Api from "./Componets/Semi-components/api";
+import Successrent from "./Componets/Semi-components/successrent";
+import Successsell from "./Componets/Semi-components/successsell";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -20,11 +22,12 @@ function App() {
       <Route path="/signin" element={<Login />} />
       <Route path="/soko" element={<Soko />} />
       <Route path="/blogs" element={<Blogspage />} />
-      <Route path="/ghala" element={<Ghalas />}>
-        <Route path="1" element={<Ghaladetailview />} />
-      </Route>
+      <Route path="/ghala" element={<Ghalas />} />
+      <Route path="ghala/:id" element={<Ghaladetailview />} />
       <Route path="/mysoko" element={<Masokowallet />} />
       <Route path="/logout" element={<Homepage />} />
+      <Route path="/successrent" element={<Successrent />} />
+      <Route path="/successsell" element={<Successsell />} />
     </Routes>
   );
 }

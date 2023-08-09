@@ -15,8 +15,8 @@ function MyGhalacard() {
     });
   }, []);
   return (
-    <div className="flex flex-col my-6 md:gap-12 md:grid-cols-4 md:grid px-2 md:px-6">
-      {Data.map((ghala) => {
+    <div className="flex flex-col px-2 my-6 md:gap-12 md:grid-cols-4 md:grid md:px-6">
+      {Data.map((ghala, index) => {
         return (
           <div className="overflow-hidden rounded-lg shadow-lg">
             <div key={Data.index} className="w-full my-8">
@@ -38,11 +38,8 @@ function MyGhalacard() {
                   <img src={locationpin} alt="pin" />
                   <p className="px-1">{ghala.location}</p>
                 </div>
-                <div className="bg-green-500 text-center  rounded-md font-semibold text-white flex">
-                  <Link
-                    to={`ghala/${ghala.id}`}
-                    className="  w-full h-full p-2"
-                  >
+                <div className="flex font-semibold text-center text-white bg-green-500 rounded-md">
+                  <Link to={`ghala/${index}`} className="w-full h-full p-2 ">
                     View Ghala
                   </Link>
                 </div>

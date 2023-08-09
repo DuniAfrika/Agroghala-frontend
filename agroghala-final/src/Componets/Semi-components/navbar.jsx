@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/navbar.css"
+import "../styles/navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -32,14 +32,14 @@ function Navbar() {
           <Link to="/">
             <li>Home</li>
           </Link>
+          <Link to="/ghala">
+            <li className="truncate">Ghalas</li>
+          </Link>
+          <Link to="/soko">
+            <li>Soko</li>
+          </Link>
           <Link to="/blogs">
             <li>Blogs</li>
-          </Link>
-          <Link to="/contact">
-            <li className="truncate">Contact Us</li>
-          </Link>
-          <Link to="/about">
-            <li>About</li>
           </Link>
           {authenticated ? (
             <Link to="/logout" onClick={handleLogout}>
