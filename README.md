@@ -1,6 +1,6 @@
 ## Agroghala
 ### Project Summary
-- The Issue we are hoping tio solve
+- The Issue we are hoping to solve
 - How our tech solution can help
 - Our idea
 ### Technology Implementation
@@ -12,3 +12,32 @@
 - Project Development Roadmap
 ### How to run the project
 - Running the frontend on local machine
+
+## Project Summary
+### The Issue we are hoping to solve
+We're revolutionizing Sub-Saharan Africa's agriculture by solving food insecurity as a result of storage-driven post-harvest losses. By implementing innovative storage solutions and empowering local farmers with modern technologies, we aim to create a sustainable and resilient food supply chain that positively impacts communities across the region.
+### How Our tech solution can help
+We're revolutionizing Sub-Saharan Africa's agriculture by solving storage-driven post-harvest losses. Our platform unites local farmers with quality nearby warehouses and empowers direct selling through real-time market insights, bypassing intermediaries. Discover loss-reduction strategies on our insightful blog.
+### Our Idea
+In Sub-Saharan Africa, a serious challenge threatens food security due to on-farm storage loss. Small-scale farmers here struggle with significant grain losses during crucial stages like harvesting, handling, and storage.
+
+The situation is stark, with about 20.5% of cereals being lost in the region. These losses mainly occur right on the farms themselves. The problem is worsened by the lack of proper post-harvest facilities, especially for storage and marketing. This contributes to even higher post-harvest losses (PHL).
+
+Tackling this issue is urgent because reducing post-harvest losses is key to tackling food waste and enhancing overall food security. But there aren't many cases of success in improving on-farm storage methods in sub-Saharan Africa. Most efforts focus on making grain storage on the farm better, showing that each context is complex and unique.
+
+To address this, our forward-looking project plans to use online platforms as a game-changing solution. Our goal is to connect small-scale farmers who don't have enough storage space with those who have extra, high-quality storage facilities. This platform isn't just a link to address on-farm storage loss; it's also a way to modernize agriculture digitally.
+
+The heart of our project is giving struggling farmers access to better storage space. This access leads to improved crop preservation and a notable reduction in on-farm storage loss. By making it easy to rent top-notch storage spaces, we're aiming to trigger a positive shift in how farming is done and the results achieved.
+
+At its core, this platform is a dynamic connection between those who have storage space and those who need it. Beyond reducing on-farm storage loss, it brings about other positive outcomes. It cuts down food waste, boosts food security, and importantly, increases farmers' profits. By sidestepping middlemen and enabling direct selling using real-time market data, we're giving farmers more control over their economic fate.
+
+An interesting part of our project is the blog section. Here, farmers can learn smart strategies to tackle post-harvest losses. This collection of knowledge is a helpful resource, making sure farmers have practical tools to improve storage practices and reduce losses right from the start.
+
+The success story of the DuniAfrika Group in Kenya showcases how this approach can work. Their AgroGhala platform, powered by DuniAfrika, connects farmers to good storage options and significantly reduces post-harvest losses. The real-time market data also helps farmers sell directly without costly middlemen. AgroGhala's blog gives farmers clever ways to fight post-harvest loss, giving them valuable insights.
+
+In conclusion, our project brings hope. It doesn't just deal with on-farm storage loss, but it also aligns with larger goals of reducing food waste and boosting food security. Through this digital innovation, we're picturing a brighter future for Sub-Saharan Africa—one where farmers are equipped to handle post-harvest losses, thrive economically, and contribute to a more sustainable food system.
+
+## Technology Implementation
+### IBM AI Services Used
+[Watson Assistant]<https://cloud.ibm.com/catalog/services/watson-assistant>
+- By incorporating IBM Watson Assistant into our website, our customer support system now offers answers to user queries and helps them navigate the site. This trained chatbot provides guidance on platform features, aiding users after their initial inquiries. This boosts user experience, speeds up support, and empowers users to explore independently. The benefits include personalized help, immediate support, and improved self-navigation, leading to higher customer satisfaction and engagement.
