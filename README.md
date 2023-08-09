@@ -60,7 +60,6 @@ In the future we plan to :
 ![Desktop Research (1)](https://github.com/DuniAfrika/Agroghala-frontend/assets/136475577/d4b5728f-c493-47db-99cb-516d0c4fc632)
 
 
-
 ## How to run this project 
 ### Running the frontend on your local machine
 - Clone the repository using this specific line in your CLI `git clone -b Robert_branch https://github.com/DuniAfrika/Agroghala-frontend`
