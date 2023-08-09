@@ -54,8 +54,11 @@ Currently a farmer can do the following:
   
 In the future we plan to :
 
-- 
-- 
+- Integrate AI powered market data insights
+- Integrate Location services
+- Provide Agroghala to first responder communities
+![Desktop Research (1)](https://github.com/DuniAfrika/Agroghala-frontend/assets/136475577/d4b5728f-c493-47db-99cb-516d0c4fc632)
+
 
 
 ## How to run this project 
