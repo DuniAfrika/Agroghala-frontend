@@ -74,4 +74,4 @@ In the future we plan to :
 
 **Make sure to start your backend for authentication.**
 
-**Note:** *Login credentials are given in the [backend README.md]()*
+**Note:** *Login credentials are given in the [backend README.md](https://github.com/DuniAfrika/Agroghala-backend/tree/main/agroghala_final#login-credentials)*
