@@ -43,8 +43,11 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 - By incorporating IBM Watson Assistant into our website, our customer support system now offers answers to user queries and helps them navigate the site. This trained chatbot provides guidance on platform features, aiding users after their initial inquiries. This boosts user experience, speeds up support, and empowers users to explore independently. The benefits include personalized help, immediate support, and improved self-navigation, leading to higher customer satisfaction and engagement.
 
 ### Solution Architecture Diagram
+![Your paragraph text](https://github.com/DuniAfrika/Agroghala-frontend/assets/136475577/37f0a8f0-6066-45dd-bd84-a372d1d63b7c)
+
 ## Presentation Materials
 ### Youtube solution video
+https://youtu.be/5d0mZVvHzJA
 ### Project Development Roadmap
 Currently a farmer can do the following:
 - Registration and Login
