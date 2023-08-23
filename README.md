@@ -46,7 +46,7 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 -The integration of IBM Watson Assistant is primarily carried out within the following parts of our codebase:
   -[assistant.jsx](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/agroghala-final/src/Componets/assistant.jsx) - This JavaScript module handles the communication between the user interface and the IBM Watson Assistant API.
   -[ghala-assistant-action-v6.json](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/agroghala-final/src/Componets/ghala-assitant-action-v6.json) - This JSON file defines the dialog flow structure and responses for different user intents.
-  -[App.js]() - The ReactJS file that displays the chatbot interface within our web app.
+  -[App.js](https://github.com/DuniAfrika/Agroghala-frontend/blob/Robert_branch/agroghala-final/src/App.js) - The ReactJS file that displays the chatbot interface within our web app.
 #### Example Interaction:
 **User:** "How can I rent a warehouse??"
 **IBM Watson Assistant:** "To rent a warehouse, go to 'Ghalas' , choose a suitable warehouse, and complete the reservation by specifying space quantity and rental period. Click 'Rent' to finalize the process."
