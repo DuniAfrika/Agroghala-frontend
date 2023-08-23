@@ -12,7 +12,7 @@ import Rentghala from "./Componets/rent";
 import Sellcommodity from "./Componets/Sell"
 import Contact from './Componets/Semi-components/contacts';
 import CreateBlog from './Componets/Semi-components/createblog';
-import ChatWidget from './Componets/assistant';
+import ChatWidget from './Componets/assistant'; //integration of IBM Watson Assistant chatbot
 
 
 function App() {
