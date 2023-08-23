@@ -42,12 +42,12 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant)
 - By incorporating IBM Watson Assistant into our website, our customer support system now offers answers to user queries and helps them navigate the site. This trained chatbot provides guidance on platform features, aiding users after their initial inquiries. This boosts user experience, speeds up support, and empowers users to explore independently. The benefits include personalized help, immediate support, and improved self-navigation, leading to higher customer satisfaction and engagement.
 -  IBM Watson Assistant serves as a virtual guide within our AgroGhala system, assisting farmers with information and instructions related to using our web app and conducting different agricultural activities. Through natural language interactions, users can easily access support and information without the need for complex navigation.
-####pointers to code
+#### pointers to code
 -The integration of IBM Watson Assistant is primarily carried out within the following parts of our codebase:
   -`[assistant.jsx]()` - This JavaScript module handles the communication between the user interface and the IBM Watson Assistant API.
   -`ghala-assistant()`-action-v6.json - This JSON file defines the dialog flow structure and responses for different user intents.
   -`App.js()` - The ReactJS file that displays the chatbot interface within our web app.
-####Example Interaction:
+#### Example Interaction:
 **User:** "How can I rent a warehouse??"
 **IBM Watson Assistant:** "To rent a warehouse, go to 'Ghalas' , choose a suitable warehouse, and complete the reservation by specifying space quantity and rental period. Click 'Rent' to finalize the process."
 **User:** "What if I want to sell my products?"
