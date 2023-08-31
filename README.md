@@ -67,7 +67,7 @@ In conclusion, our project brings hope. It doesn't just deal with on-farm storag
 
 ## Presentation Materials
 ### Youtube solution video
-https://youtu.be/5d0mZVvHzJA
+[![Watch the video](https://img.youtube.com/vi/cfuW50bRCnk/hqdefault.jpg)](https://www.youtube.com/embed/cfuW50bRCnk)
 ### Project Development Roadmap
 Currently a farmer can do the following:
 - Registration and Login
